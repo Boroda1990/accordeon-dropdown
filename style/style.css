@@ -1,0 +1,141 @@
+.phone-number-box {
+  max-width: 272px;
+  background-color: #81c784;
+  border: 3px solid #004d40;
+  border-radius: 12px;
+  padding: 15px 30px;
+  transition: .6s;
+  
+  
+}
+.main-number {
+  display: flex;
+  justify-content: space-between;
+}
+.main-number a,
+.number-list ul li a{
+  text-decoration: none;
+  color: #9c27b0;
+ 
+}
+.main-number a{
+  font-size: 20px;
+}
+.number-list{
+  display: none;
+}
+
+.active .number-list{
+  display: block;
+ 
+} 
+.number-list ul{
+  list-style: none;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+.accordeon {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  max-width: 749px;
+  margin: 11px auto;
+  min-height: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c5cae9;
+    border: 2px solid #9c27b0;
+    border-radius: 12px;
+}
+.accordeon__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  padding: 16px;
+  margin: 6px;
+  color: #0f83bd;
+  font-size: 0;
+  transition: .4s;
+  border: 1px solid black;
+    border-radius: 12px;
+}
+.accordeon__item-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.accordeon__item:first-child{
+  background-color: #f8bbd0;
+}
+.accordeon__item:nth-child(2){
+  background-color: #80deea;
+}
+.accordeon__item:nth-child(3){
+  background-color: #a5d6a7;
+}
+.accordeon__item:last-child{
+  background-color: #ffe0b2;
+}
+.accordeon__item.active {
+  background-color: #cfd8dc;
+  color: #000;
+  font-size: 18px;
+  height: auto;
+}
+.marker, 
+.switch{
+  width: 26px;
+  height: 25px;
+  background-color: rgb(143, 143, 240);
+  position: relative;
+  border-radius: 5px;
+ 
+}
+.marker::after,
+.marker::before,
+.switch::after,
+.switch::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(50% + -5px);
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: #000;
+  width: 15px;
+  height: 2px;
+  transition: .4s;
+}
+.marker::before,
+.switch::before{
+  left: calc(50% + 5px);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: #000;
+}
+ 
+.accordeon__item.active .marker::before,
+.phone-number-box.active .switch::before{
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg); 
+}
+
+
+.accordeon__item.active .marker::after,
+.phone-number-box.active .switch::after{
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+}
+ 
+ 
+
+
+
